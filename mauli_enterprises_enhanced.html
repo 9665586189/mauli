@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mauli Enterprises - Online Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background-color: #0a4275;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #063456;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #0a4275;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #e0f2ff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .service-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .service-card img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    .contact {
+      background-color: #063456;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .contact-form button {
+      background-color: #0a4275;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #021d34;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mauli Enterprises</h1>
+    <p>Online Services - Aadhar, PAN, Voter, Ration Card Printing</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section class="hero" id="home">
+    <h1>Welcome to Mauli Enterprises</h1>
+    <p>Your trusted partner for government documentation services</p>
+  </section>
+  <section class="services" id="services">
+    <div class="service-card" onclick="window.open('https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en', '_blank')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aadhaar_Logo.svg/1200px-Aadhaar_Logo.svg.png" alt="Aadhar Logo"/>
+      <h2>Aadhar Card</h2>
+      <p>Update & Print Services</p>
+    </div>
+    <div class="service-card" onclick="window.open('https://www.incometax.gov.in/iec/foportal/help/how-to-generate-instant-e-pan', '_blank')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Income_Tax_Department_Logo.svg/1024px-Income_Tax_Department_Logo.svg.png" alt="PAN Logo"/>
+      <h2>PAN Card</h2>
+      <p>New & Correction Services</p>
+    </div>
+    <div class="service-card" onclick="window.open('https://voters.eci.gov.in/', '_blank')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/ECI_Logo.svg/2048px-ECI_Logo.svg.png" alt="Voter Logo"/>
+      <h2>Voter Card</h2>
+      <p>Registration & Updates</p>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: 9665586189</p>
+    <p>Email: emauli435@gmail.com</p>
+    <div class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Address" required />
+      <input type="tel" placeholder="Mobile Number" required />
+      <input type="email" placeholder="Email ID" required />
+      <button onclick="alert('Form submitted! (Backend integration required for email, Excel, and WhatsApp)')">Submit</button>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Mauli Enterprises. All rights reserved.</p>
+  </footer>
+</body>
+</html>
